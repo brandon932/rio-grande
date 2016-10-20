@@ -8,11 +8,8 @@ var inventory = {
   5:0
 };
 
-
-
 function findInventory(length) {
   console.log( length +":" +inventory[length]);
-
 }
 
 function addInventory(quantity, length){
@@ -33,6 +30,7 @@ function cutInventory(stock, length){
   inventory[stock] -= 1;
   inventory[length] += 1;
   inventory[stock-length] =+ 1;
+  console.log( length +":" +inventory[length]);
 }
 
 findInventory(1);
